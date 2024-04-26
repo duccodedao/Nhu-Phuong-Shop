@@ -18,26 +18,59 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 document.addEventListener("DOMContentLoaded", function() {
-    const orderCountElement = document.getElementById("orderCount");
-    const experienceYearsElement = document.getElementById("experienceYears");
-    const totalOrders = 3000;
-    const totalYears = 10;
-    let currentOrderCount = 0;
-    let currentExperienceYears = 0;
+    let isScrolledToBottom = false;
 
-    const orderInterval = setInterval(function() {
-        currentOrderCount++;
-        orderCountElement.textContent = currentOrderCount;
-        if (currentOrderCount === totalOrders) {
-            clearInterval(orderInterval);
-        }
-    }, 100);
+    // Function to check if user has scrolled to the bottom of the page
+    function checkScrollToBottom() {
+        const windowHeight = window.innerHeight;
+        const body = document.body;
+        const html = document.documentElement;
+        const documentHeight = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+        const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
 
-    const yearsInterval = setInterval(function() {
-        currentExperienceYears++;
-        experienceYearsElement.textContent = currentExperienceYears;
-        if (currentExperienceYears === totalYears) {
-            clearInterval(yearsInterval);
+        if ((documentHeight - windowHeight - scrollPosition) < 10) { // 10 pixels threshold for being at bottom
+            isScrolledToBottom = true;
+        } else {
+            isScrolledToBottom = false;
         }
-    }, 1000); // 1000 milliseconds = 1 second
+    }
+
+    // Function to update statistics when scrolled to bottom
+    function updateStatistics() {
+        if (isScrolledToBottom) {
+            const orderCountElement = document.getElementById("orderCount");
+            const experienceYearsElement = document.getElementById("experienceYears");
+            const totalOrders = 3000;
+            const totalYears = 10;
+            let currentOrderCount = 0;
+            let currentExperienceYears = 0;
+
+            const orderInterval = setInterval(function() {
+                currentOrderCount++;
+                orderCountElement.textContent = currentOrderCount;
+                if (currentOrderCount === totalOrders) {
+                    clearInterval(orderInterval);
+                }
+            }, 100);
+
+            const yearsInterval = setInterval(function() {
+                currentExperienceYears++;
+                experienceYearsElement.textContent = currentExperienceYears;
+                if (currentExperienceYears === totalYears) {
+                    clearInterval(yearsInterval);
+                }
+            }, 1000); // 1000 milliseconds = 1 second
+
+            // Remove scroll event listener once statistics are updated
+            window.removeEventListener("scroll", handleScroll);
+        }
+    }
+
+    // Event listener for scroll event
+    function handleScroll() {
+        checkScrollToBottom();
+        updateStatistics();
+    }
+
+    window.addEventListener("scroll", handleScroll);
 });
