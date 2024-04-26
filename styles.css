@@ -241,7 +241,7 @@ main {
 
 /* CSS cho phần thông báo ưu đãi */
 .promotion {
-  background-color: #ffcc00;
+  background-color: red;
   text-align: center;
   padding: 20px;
   margin-top: 20px;
