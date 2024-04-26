@@ -89,8 +89,9 @@ header nav ul li a:hover {
 }
 
 .back-to-top img {
-    width: 20px;
-    height: 20px;
+    width: 100%; /* Chiều rộng là 100% của phần tử cha */
+    height: auto; /* Chiều cao tự động dựa trên tỷ lệ khung hình */
+    border-radius: 50%; /* Biến ảnh thành hình tròn */
 }
 
 .hidden {
