@@ -15,3 +15,29 @@ document.addEventListener("DOMContentLoaded", function() {
       confirmButtonText: 'Đồng ý'
   });
 });
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const orderCountElement = document.getElementById("orderCount");
+    const experienceYearsElement = document.getElementById("experienceYears");
+    const totalOrders = 3000;
+    const totalYears = 10;
+    let currentOrderCount = 0;
+    let currentExperienceYears = 0;
+
+    const orderInterval = setInterval(function() {
+        currentOrderCount++;
+        orderCountElement.textContent = currentOrderCount;
+        if (currentOrderCount === totalOrders) {
+            clearInterval(orderInterval);
+        }
+    }, 100);
+
+    const yearsInterval = setInterval(function() {
+        currentExperienceYears++;
+        experienceYearsElement.textContent = currentExperienceYears;
+        if (currentExperienceYears === totalYears) {
+            clearInterval(yearsInterval);
+        }
+    }, 1000); // 1000 milliseconds = 1 second
+});
