@@ -1,0 +1,344 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* CSS cho phần header */
+header {
+  background-color: #343a40; /* Màu nền */
+  padding: 20px 0; /* Khoảng cách lề trên và dưới */
+  text-align: center; /* Canh giữa nội dung */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Đổ bóng */
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header h1 {
+  color: #fff; /* Màu chữ */
+  font-size: 24px; /* Kích thước chữ */
+  margin: 0; /* Xoá margin để canh giữa */
+  text-transform: uppercase; /* Chuyển đổi văn bản thành chữ in hoa */
+  letter-spacing: 2px; /* Khoảng cách giữa các ký tự */
+}
+
+header nav {
+  margin-top: 20px; /* Khoảng cách giữa header và nav */
+}
+
+header nav ul {
+  list-style: none; /* Loại bỏ dấu chấm tròn */
+  padding: 0;
+}
+
+header nav ul li {
+  display: inline;
+  margin-right: 20px; /* Khoảng cách giữa các mục trong menu */
+}
+
+header nav ul li a {
+  color: #fff; /* Màu chữ */
+  text-decoration: none; /* Loại bỏ gạch chân */
+  transition: color 0.3s ease; /* Hiệu ứng màu khi hover */
+}
+
+header nav ul li a:hover {
+  color: #ffc107; /* Màu chữ khi hover */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: #ccc;
+}
+
+.options {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.option {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.option img {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.option p {
+  text-decoration: none;
+  margin-top: 10px;
+ font-weight: bold;
+ font-family: Verdana;
+ font-size: 25px;
+}
+
+
+
+
+.zoomable-image {
+  width: 100%;
+  transition: transform 0.5s ease;
+}
+
+.zoomable-image:hover {
+  transform: scale(1.1);
+}
+
+
+
+@media only screen and (max-width: 768px) {
+  .sidebar {
+      display: none;
+  }
+  
+  .menu-toggle {
+      display: block;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+  }
+
+}
+
+
+
+/* CSS cho phần footer */
+footer {
+  background-color: #343a40; /* Màu nền */
+  color: #fff; /* Màu chữ */
+  padding: 20px 0; /* Khoảng cách lề trên và dưới */
+  text-align: center; /* Canh giữa nội dung */
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.logo img {
+  width: 100px; /* Kích thước logo */
+  margin-right: 20px; /* Khoảng cách giữa logo và icon */
+}
+
+.social-icons img {
+  width: 60px; /* Kích thước icon */
+  margin: 0 10px; /* Khoảng cách giữa các icon */
+}
+
+.social-icons img:hover {
+  opacity: 0.8; /* Đổi độ mờ khi hover */
+}
+
+/* CSS cho chữ bản quyền */
+.copyright {
+  font-size: 14px;
+}
+
+
+.address {
+  text-align: left;
+  margin-right: 20px;
+}
+
+.address p {
+  margin: 5px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* CSS cho phần thông báo ưu đãi */
+.promotion {
+  background-color: #ffcc00;
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.promotion p {
+  font-size: 18px;
+  color: #333;
+  margin: 0;
+}
+
+.promotion img {
+  max-width: 100%;
+  margin-top: 10px;
+}
+/* CSS cho phần thông tin liên hệ */
+.contact-info {
+  margin-bottom: 20px;
+}
+
+.contact-info h3 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.contact-info p {
+  margin: 0;
+  color: #555;
+}
+
+
+
+
+
+
+
+/* CSS cho phần danh sách phụ kiện */
+.clothing-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.clothing-item {
+  text-align: center;
+  width: calc(50% - 20px);
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  padding: 0 10px;
+}
+
+.clothing-item img {
+  width: 70%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.clothing-item h2 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.clothing-item p {
+  margin: 0;
+  color: #666;
+}
+
+/* CSS cho giá gốc */
+.original-price {
+  color: #d9534f;
+  text-decoration: line-through;
+}
+
+/* CSS cho giá hiện tại */
+.final-price {
+  color: #5cb85c;
+  font-size: 20px;
+}
+
+
+/* CSS phản ứng */
+@media (max-width: 768px) {
+  .clothing-item {
+      width: calc(100% - 20px); /* Hiển thị 1 cột trên mỗi hàng khi trên thiết bị di động */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.plugin-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+}
+
+.plugin {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  overflow: hidden;
+  transition: transform 0.3s;
+  animation: shake 0.5s infinite alternate;
+}
+
+.plugin img {
+  width: 100%;
+  height: auto;
+}
+
+.plugin:hover {
+  transform: scale(1.1);
+  animation: none; /* Ngừng hiệu ứng rung khi di chuột qua */
+}
+
+@keyframes shake {
+  from {
+      transform: translateX(-2px);
+  }
+  to {
+      transform: translateX(2px);
+  }
+}
