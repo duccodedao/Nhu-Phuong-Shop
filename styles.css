@@ -248,9 +248,11 @@ main {
 }
 
 .promotion p {
-  font-size: 18px;
-  color: #333;
-  margin: 0;
+  color: #fff; /* Màu chữ */
+  font-size: 24px; /* Kích thước chữ */
+  margin: 0; /* Xoá margin để canh giữa */
+  letter-spacing: 2px; /* Khoảng cách giữa các ký tự */
+  text-align: center; /* Canh giữa nội dung */
 }
 
 .promotion img {
