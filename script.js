@@ -20,7 +20,6 @@ document.addEventListener("DOMContentLoaded", function() {
 document.addEventListener("DOMContentLoaded", function() {
     let isScrolledToBottom = false;
 
-    // Function to check if user has scrolled to the bottom of the page
     function checkScrollToBottom() {
         const windowHeight = window.innerHeight;
         const body = document.body;
@@ -35,7 +34,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    // Function to update statistics when scrolled to bottom
     function updateStatistics() {
         if (isScrolledToBottom) {
             const orderCountElement = document.getElementById("orderCount");
@@ -51,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 if (currentOrderCount === totalOrders) {
                     clearInterval(orderInterval);
                 }
-            }, 100);
+            }, 3);
 
             const yearsInterval = setInterval(function() {
                 currentExperienceYears++;
@@ -66,7 +64,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    // Event listener for scroll event
     function handleScroll() {
         checkScrollToBottom();
         updateStatistics();
