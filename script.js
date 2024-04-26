@@ -71,3 +71,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
     window.addEventListener("scroll", handleScroll);
 });
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const supportPlugin = document.getElementById("supportPlugin");
+
+    window.addEventListener("scroll", function() {
+        if (window.scrollY > (document.body.scrollHeight - window.innerHeight - 100)) { // Change 100 to adjust the scroll position threshold
+            supportPlugin.classList.remove("hidden");
+        } else {
+            supportPlugin.classList.add("hidden");
+        }
+    });
+});
