@@ -73,6 +73,30 @@ header nav ul li a:hover {
 }
 
 
+.back-to-top {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: #ccc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: opacity 0.3s ease; /* Thêm hiệu ứng mượt khi thay đổi opacity */
+}
+
+.back-to-top img {
+    width: 20px;
+    height: 20px;
+}
+
+.hidden {
+    opacity: 0; /* Ẩn nút khi không được hiển thị */
+    pointer-events: none; /* Ngăn chặn sự kiện click khi nút bị ẩn */
+}
 
 
 
