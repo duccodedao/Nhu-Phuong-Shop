@@ -28,11 +28,17 @@ header nav {
 header nav ul {
   list-style: none; /* Loại bỏ dấu chấm tròn */
   padding: 0;
+  display: flex; /* Sử dụng flexbox */
+  justify-content: center; /* Căn giữa các mục trong menu */
 }
 
 header nav ul li {
   display: inline;
   margin-right: 20px; /* Khoảng cách giữa các mục trong menu */
+}
+
+header nav ul li:last-child {
+  margin-right: 0; /* Không có khoảng cách với phần tử cuối cùng */
 }
 
 header nav ul li a {
