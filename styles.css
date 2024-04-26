@@ -57,8 +57,6 @@ header nav ul li a:hover {
 
 
 
-/* CSS reset và các phần CSS khác */
-
 .statistics {
     background-color: #333;
     color: #fff;
@@ -68,6 +66,10 @@ header nav ul li a:hover {
 
 .statistics p {
     margin: 5px 0; /* Tạo khoảng cách giữa các đoạn văn bản */
+}
+
+.statistics p span {
+    color: red; /* Đặt màu chữ của số chạy là màu đỏ */
 }
 
 
