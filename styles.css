@@ -57,6 +57,18 @@ header nav ul li a:hover {
 
 
 
+/* CSS reset và các phần CSS khác */
+
+.statistics {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+.statistics p {
+    margin: 5px 0; /* Tạo khoảng cách giữa các đoạn văn bản */
+}
 
 
 
