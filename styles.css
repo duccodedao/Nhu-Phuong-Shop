@@ -144,12 +144,15 @@ nav ul li a:hover {
 
 
 
-/* CSS cho phần footer */
 footer {
-  background-color: #343a40; /* Màu nền */
-  color: #fff; /* Màu chữ */
-  padding: 20px 0; /* Khoảng cách lề trên và dưới */
-  text-align: center; /* Canh giữa nội dung */
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #343a40; /* Màu nền */
+    color: #fff; /* Màu chữ */
+    padding: 20px 0; /* Khoảng cách lề trên và dưới */
+    text-align: center; /* Canh giữa nội dung */
 }
 
 .footer-content {
