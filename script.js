@@ -85,3 +85,24 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+document.addEventListener("DOMContentLoaded", function() {
+    const backToTopBtn = document.querySelector(".back-to-top");
+
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    }
+
+    function handleScroll() {
+        if (window.pageYOffset > 100) { // Kiểm tra vị trí cuộn của trang
+            backToTopBtn.classList.remove("hidden");
+        } else {
+            backToTopBtn.classList.add("hidden");
+        }
+    }
+
+    backToTopBtn.addEventListener("click", scrollToTop);
+    window.addEventListener("scroll", handleScroll);
+});
