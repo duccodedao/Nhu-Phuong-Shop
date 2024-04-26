@@ -302,9 +302,22 @@ main {
 }
 
 .promotion img {
-  max-width: 100%;
-  margin-top: 10px;
+    width: 100%; /* Đảm bảo hình ảnh đầy đủ kích thước trong phần tử promotion */
+    animation: blink 1s infinite; /* Thêm animation */
 }
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 /* CSS cho phần thông tin liên hệ */
 .contact-info {
   margin-bottom: 20px;
